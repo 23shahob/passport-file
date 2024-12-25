@@ -9,25 +9,29 @@
   <body>
     <div id="app">
       <div class="tabs">
-        <button class="tab-btn active" data-tab="id-card">ID Card</button>
-        <button class="tab-btn" data-tab="passport">Passport</button>
+        <button id="id-card" class="tab-btn active" data-tab="id-card">
+          ID Card
+        </button>
+        <button id="passport" class="tab-btn" data-tab="passport">
+          Passport
+        </button>
       </div>
 
-      <div id="passport-tab" class="tab-content active">
-        <form id="upload-form">
+      <div id="id-card-tab" class="tab-content active">
+        <form id="upload-form-id-card">
+          <label for="id-card-upload">Upload ID Card:</label>
+          <input type="file" id="id-card-upload" accept="image/*" />
+          <div id="id-card-preview" class="preview"></div>
+          <button type="submit">Submit ID Card</button>
+        </form>
+      </div>
+
+      <div id="passport-tab" class="tab-content">
+        <form id="upload-form-passport">
           <label for="passport-upload">Upload Passport:</label>
           <input type="file" id="passport-upload" accept="image/*" />
           <div id="passport-preview" class="preview"></div>
-          <button type="submit">Submit ID Card</button>
-        </form>
-    </div>
-    
-    <div id="id-card-tab" class="tab-content">
-        <form id="upload-form">
-            <label for="id-card-upload">Upload ID Card:</label>
-            <input type="file" id="id-card-upload" accept="image/*" />
-            <div id="id-card-preview" class="preview"></div>
-            <button type="submit">Submit Passport</button>
+          <button type="submit">Submit Passport</button>
         </form>
       </div>
 
